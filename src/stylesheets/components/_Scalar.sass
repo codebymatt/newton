@@ -1,0 +1,63 @@
+#scalar-wrapper
+    display: flex
+    justify-content: center
+    .input-wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: relative
+        input
+            margin-bottom: 10px
+            width: 120px
+            height: 45px
+            background: #FFFFFF
+            box-shadow: 0 1px 5px 0 #424242
+            border-radius: 3px
+            border-style: none
+            text-align: right
+            padding-right: 5px
+            font-size: 18px
+            color: $dark-gray
+            &:focus
+                outline: none
+        select
+            -webkit-appearance: none
+            -moz-appearance: none
+            appearance: none
+            outline-style: none
+            //color: #4D0082
+            color: #000
+            color: rgba(0,0,0,0)
+            text-shadow: 0 0 0 #4D0082
+            background-color: $white
+            border-radius: 3px
+            border-style: none
+            box-shadow: 0 1px 5px 0 #424242
+            width: 100px
+            height: 35px
+            font-size: 16px
+            font-family: $main-font
+            font-weight: $heavy-weight
+            padding-left: 5px
+            // The below styles work everywhere except Safari
+            //text-align-last: center
+            //text-align: -webkit-center
+            //text-align-last: center
+            //text-align: center
+            //-ms-text-align-last: center
+            //-moz-text-align-last: center
+        .select-wrapper
+            position: relative
+            .selectors
+                position: absolute
+                right: 10px
+                top: 10px
+    .arrows
+        padding-bottom: 55px
+
+@media screen and (min-width: 1200px)
+    #scalar-wrapper
+        max-width: 450px
+        .input-wrapper
+            input
+                width: 175px
