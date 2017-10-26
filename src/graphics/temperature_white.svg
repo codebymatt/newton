@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="54px" viewBox="0 0 15 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Temperatur</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-SE" transform="translate(-218.000000, -542.000000)">
+            <g id="Inner" transform="translate(5.000000, 25.000000)">
+                <g id="Quantities" transform="translate(30.000000, 502.000000)">
+                    <g id="Temp" transform="translate(130.000000, 0.000000)">
+                        <g id="Temperatur" transform="translate(53.000000, 15.000000)">
+                            <path d="M10.75,0.5 L4.25,0.5 L4.25,40.0417622 L4.00036298,40.1861694 C1.85124228,41.4293686 0.5,43.7217024 0.5,46.25 C0.5,50.1159932 3.63400675,53.25 7.5,53.25 C11.3659932,53.25 14.5,50.1159932 14.5,46.25 C14.5,43.7217024 13.1487577,41.4293686 10.999637,40.1861694 L10.75,40.0417622 L10.75,0.5 Z" id="Combined-Shape" stroke="#FFFFFF"></path>
+                            <circle id="Oval-2" fill="#FFFFFF" cx="7.5" cy="46.25" r="7.5"></circle>
+                            <rect id="Rectangle-10" fill="#FFFFFF" x="3.75" y="27.5" width="7.5" height="12.5"></rect>
+                            <rect id="Rectangle-11" fill="#FFFFFF" x="4" y="23.75" width="3.5" height="1.25"></rect>
+                            <rect id="Rectangle-11" fill="#FFFFFF" x="4" y="18.75" width="3.5" height="1.25"></rect>
+                            <rect id="Rectangle-11" fill="#FFFFFF" x="4" y="13.75" width="3.5" height="1.25"></rect>
+                            <rect id="Rectangle-11" fill="#FFFFFF" x="4" y="8.75" width="3.5" height="1.25"></rect>
+                            <rect id="Rectangle-11" fill="#FFFFFF" x="4" y="3.75" width="3.5" height="1.25"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
