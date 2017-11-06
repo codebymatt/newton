@@ -7,11 +7,10 @@ import selectors from '../graphics/selectors.svg';
 class Scalar extends Component {
     constructor(props){
         super(props);
-        var f = function(c) {return 32 + 9*(c/5)}
-        var b = function(h) {return (h-32)*(5/9)}
+        var f = (c) => {return 32 + 9*(c/5)}
+        var b = (h) => {return (h-32)*(5/9)}
         this.state = { x: '', y: '', forwardRate: f, backwardRate: b, left: 'cels', right: 'fahr', selectedMetric: "temp" };
     }
-    //(d) => return 32 + 5*(d/9)
     getMetricOptions(selectedMetric){
         return this.props.units.filter((unit) => {
                 return unit.name == selectedMetric
@@ -24,6 +23,29 @@ class Scalar extends Component {
         return options.map((option) => {
             return <option key={option.name} value={option.name} >{option.verbose}</option>
         });
+    }
+
+    /*getForwardRate(left, right) {
+        var options = this.props.rates.filter((unit) => {
+            return unit.name == left
+        })[0];
+        var rate = options.filter((result) => {
+            return result.name == right
+        });
+        console.log(rate);
+        //console.log(options.options);
+    }*/
+
+    getResult(start, end, input) {
+        var options = this.props.rates.filter((unit) => {
+            return unit.name == start
+        })[0];
+        var rate = options.options.filter((result) => {
+            return result.name == end
+        })[0];
+        //console.log(rate.name)
+        return rate.f(input)
+        //console.log(options.options)
     }
 
     render () {
@@ -39,14 +61,17 @@ class Scalar extends Component {
                             event => this.setState({
                                 x: event.target.value,
                                 //y: event.target.value * this.state.rate })
-                                y: this.state.forwardRate(event.target.value) })
+                                //y: this.state.forwardRate(event.target.value) })
+                                y: this.getResult(this.state.left, this.state.right, event.target.value) })
                             }
                     />
                     <div className='select-wrapper'>
                         <select
                             onChange={
                                 event => this.setState({
-                                    left: event.target.value
+                                    left: event.target.value,
+                                    //forwardRate: this.getRate(this.state.left, this.state.right)
+                                    y: this.getResult(this.state.left, this.state.right, this.state.x),
                                 })
                             }
                             value={this.state.left}
@@ -56,7 +81,15 @@ class Scalar extends Component {
                         <img className='selectors' src={selectors} />
                     </div>
                 </div>
-                <img src={arrows} className='arrows' />
+                <img src={arrows}
+                     className='arrows'
+                     onClick={
+                         event => this.setState({
+                             left: this.state.right,
+                             right: this.state.left,
+
+                         })
+                     }/>
                 <div className='input-wrapper'>
                     <input
                         type='text'
