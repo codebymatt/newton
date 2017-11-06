@@ -7,14 +7,13 @@ import selectors from '../graphics/selectors.svg';
 class Scalar extends Component {
     constructor(props){
         super(props);
-        this.state = {x: '', y: '', rate: 2, selectedMetric: "mass"};
+        var f = function(c) {return 32 + 9*(c/5)}
+        var b = function(h) {return (h-32)*(5/9)}
+        this.state = { x: '', y: '', forwardRate: f, backwardRate: b, left: 'cels', right: 'fahr', selectedMetric: "temp" };
     }
-
+    //(d) => return 32 + 5*(d/9)
     getMetricOptions(selectedMetric){
-        //var unitArray = this.props.units
-        //console.log(unitArray)
         return this.props.units.filter((unit) => {
-                //console.log(selectedMetric)
                 return unit.name == selectedMetric
             }
         )
@@ -22,9 +21,8 @@ class Scalar extends Component {
 
     renderMetricOptions(selectedMetric) {
         var options = this.getMetricOptions(selectedMetric)[0].options
-        console.log(options);
         return options.map((option) => {
-            return <option key={option.name}>{option.verbose}</option>
+            return <option key={option.name} value={option.name} >{option.verbose}</option>
         });
     }
 
@@ -40,11 +38,19 @@ class Scalar extends Component {
                         onChange={
                             event => this.setState({
                                 x: event.target.value,
-                                y: event.target.value * this.state.rate })
+                                //y: event.target.value * this.state.rate })
+                                y: this.state.forwardRate(event.target.value) })
                             }
                     />
                     <div className='select-wrapper'>
-                        <select>
+                        <select
+                            onChange={
+                                event => this.setState({
+                                    left: event.target.value
+                                })
+                            }
+                            value={this.state.left}
+                        >
                             {this.renderMetricOptions(this.state.selectedMetric)}
                         </select>
                         <img className='selectors' src={selectors} />
@@ -59,13 +65,20 @@ class Scalar extends Component {
                         value={this.state.y}
                         onChange={
                             event => this.setState({
-                                x: event.target.value * ((1/this.state.rate)),
+                                x: this.state.backwardRate(event.target.value),
                                 y: event.target.value
                             })
                         }
                     />
                     <div className='select-wrapper'>
-                        <select>
+                        <select
+                            onChange={
+                                event => this.setState({
+                                    right: event.target.value
+                                })
+                            }
+                            value={this.state.right}
+                        >
                             {this.renderMetricOptions(this.state.selectedMetric)}
                         </select>
                         <img className='selectors' src={selectors} />
@@ -78,7 +91,8 @@ class Scalar extends Component {
 
 function mapStateToProps(state) {
     return {
-        units: state.units
+        units: state.units,
+        rates: state.rates
     };
 }
 
