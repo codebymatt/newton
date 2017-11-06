@@ -1,5 +1,5 @@
 import React from 'react';
-import Scalar from './Scalar.jsx';
+import Scalar from '../containers/Scalar.jsx';
 
 export default class Inputs extends React.Component {
     render () {
