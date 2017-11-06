@@ -5,6 +5,9 @@ export default class Title extends React.Component {
         return (
             <div>
                 <h1>Newton</h1>
+                <div id='beta'>
+                    <p>BETA</p>
+                </div>
             </div>
         );
     }

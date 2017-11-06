@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="75px" height="49px" viewBox="0 0 75 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Journey</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="DistanceColor" transform="translate(-11.000000, -23.000000)">
+            <g id="Journey" transform="translate(11.000000, 21.000000)">
+                <circle id="Finish" fill="#7303C0" cx="11.7631579" cy="10.7631579" r="2.76315789"></circle>
+                <circle id="Start" fill="#7303C0" cx="65.4473684" cy="39.9736842" r="2.76315789"></circle>
+                <path d="M12.5526316,10.7631579 C27.4043643,9.20282615 34.6412065,10.1238788 34.2631579,13.5263158 C33.6960851,18.6299713 12.3841568,24.0404267 10.5789474,28.5263158 C8.77373795,33.0122049 10.5789474,42.7368421 28.7368421,34.0526316 C46.8947368,25.3684211 52.8509706,7.86167614 64.2631579,15.8947368 C69.4223695,19.5263159 73.7368421,28.5263158 52.4210526,34.0526316 C40.3161946,37.1909281 28.7368421,39.5789474 30.3157895,44.3157895 C31.8947368,49.0526316 37.1394602,49.1188214 43.7368421,49.0526316 C50.334224,48.9864417 61.1052632,43.5263158 64.2631579,40.9089052" id="Line-2" stroke="#7303C0" stroke-width="3" stroke-linecap="round"></path>
+                <text id="B" font-family="Lato-Medium, Lato" font-size="9" font-weight="400" fill="#7303C0">
+                    <tspan x="69.57725" y="48">B</tspan>
+                </text>
+                <text id="A" font-family="Lato-Medium, Lato" font-size="9" font-weight="400" fill="#7303C0">
+                    <tspan x="0.43325" y="9">A</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

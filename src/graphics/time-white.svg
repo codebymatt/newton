@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="54px" viewBox="0 0 15 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Thermometer</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ThermometerWhite" transform="translate(-43.000000, -23.000000)">
+            <g id="Thermometer" transform="translate(43.000000, 23.000000)">
+                <path d="M10.75,0.5 L4.25,0.5 L4.25,40.0417622 L4.00036298,40.1861694 C1.85124228,41.4293686 0.5,43.7217024 0.5,46.25 C0.5,50.1159932 3.63400675,53.25 7.5,53.25 C11.3659932,53.25 14.5,50.1159932 14.5,46.25 C14.5,43.7217024 13.1487577,41.4293686 10.999637,40.1861694 L10.75,40.0417622 L10.75,0.5 Z" id="Shell" stroke="#FFFFFF"></path>
+                <path d="M3.75,39.7533665 C1.50824486,41.0501518 0,43.4739412 0,46.25 C0,50.3921356 3.35786438,53.75 7.5,53.75 C11.6421356,53.75 15,50.3921356 15,46.25 C15,43.4739412 13.4917551,41.0501518 11.25,39.7533665 L11.25,27.5 L3.75,27.5 L3.75,39.7533665 Z" id="LiquidFill" fill="#FFFFFF"></path>
+                <g id="GraduationMarks" transform="translate(4.000000, 3.000000)" fill="#FFFFFF">
+                    <rect id="Rectangle-11" x="0" y="20.75" width="3.5" height="1.25"></rect>
+                    <rect id="Rectangle-11" x="0" y="15.75" width="3.5" height="1.25"></rect>
+                    <rect id="Rectangle-11" x="0" y="10.75" width="3.5" height="1.25"></rect>
+                    <rect id="Rectangle-11" x="0" y="5.75" width="3.5" height="1.25"></rect>
+                    <rect id="Rectangle-11" x="0" y="0.75" width="3.5" height="1.25"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

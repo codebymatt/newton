@@ -7,6 +7,10 @@ import Inputs from './Inputs.jsx';
 import CardDisplay from './CardDisplay.jsx';
 
 export default class App extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
     render() {
         return (
             <div>

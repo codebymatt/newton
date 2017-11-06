@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="65px" height="49px" viewBox="0 0 65 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Speedometer</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="SpeedColor" transform="translate(-18.000000, -18.000000)" fill="#7303C0">
+            <g id="Speedometer" transform="translate(18.000000, 18.000000)">
+                <g id="Gauge">
+                    <path d="M3.72423707,47.6206103 C1.34600002,43.1039574 0,37.9591663 0,32.5 C0,14.5507456 14.5507456,0 32.5,0 C50.4492544,0 65,14.5507456 65,32.5 C65,38.1856717 63.5399895,43.5303397 60.9744291,48.1795433 L57.0010306,45.0008244 C58.9184482,41.2502836 60,37.0014468 60,32.5 C60,17.3121694 47.6878306,5 32.5,5 C17.3121694,5 5,17.3121694 5,32.5 C5,36.7739064 5.97497417,40.8200954 7.71464194,44.4282864 L3.72423707,47.6206103 Z" id="Combined-Shape"></path>
+                    <g id="Group" transform="translate(5.000000, 5.000000)">
+                        <rect id="SpeedMark" x="26" y="0" width="2" height="4"></rect>
+                        <rect id="SpeedMark" transform="translate(2.000000, 28.000000) rotate(90.000000) translate(-2.000000, -28.000000) " x="1" y="26" width="2" height="4"></rect>
+                        <rect id="SpeedMark" transform="translate(53.000000, 28.000000) rotate(90.000000) translate(-53.000000, -28.000000) " x="52" y="26" width="2" height="4"></rect>
+                        <rect id="SpeedMark" transform="translate(46.000000, 10.000000) rotate(45.000000) translate(-46.000000, -10.000000) " x="45" y="8" width="2" height="4"></rect>
+                        <rect id="SpeedMark" transform="translate(8.621320, 10.121320) scale(1, -1) rotate(45.000000) translate(-8.621320, -10.121320) " x="7.62132034" y="8.12132034" width="2" height="4"></rect>
+                    </g>
+                </g>
+                <path d="M32,34 C32.7363797,34 33.569713,33 34.5,31 C39.7379866,18.57416 42.2379866,12.2408267 42,12 C41.7582841,11.7553995 38.0916175,17.4220662 31,29 C30.3333333,30.2636203 30,31.2636203 30,32 C30,33.1045695 30.8954305,34 32,34 Z" id="Needle"></path>
+            </g>
+        </g>
+    </g>
+</svg>
