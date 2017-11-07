@@ -16,6 +16,7 @@ pipeline {
                 echo 'Building package...'
                 sh 'npm run-script build'
             }
+        }
         stage('Deploy') {
             sh 'ssh matt@178.62.114.84 rm -rf /www/newton/temp_deploy/dist/'
             sh 'ssh matt@178.62.114.84 mkdir -p /www/newton/temp_deploy'
