@@ -14,7 +14,7 @@ pipeline {
                 sh 'npm install'
 
                 echo 'Building package...'
-                sh 'npm build'
+                sh 'npm run-script build'
             }
         }
     }
