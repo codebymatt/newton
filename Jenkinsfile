@@ -24,13 +24,15 @@ pipeline {
 
                 echo 'Create temp folder if not there...'
                 sh 'ssh matt@178.62.114.84 mkdir -p /home/matt/www/newton/temp_deploy'
-                sh 'pwd'
+                
                 echo 'Copying package to temp dist...'
                 sh 'scp -r ./dist matt@178.62.114.84:/home/matt/www/newton/temp_deploy/'
 
-                echo 'Moving package from temp to live...'
+                echo 'Cleaning package destination...'
                 sh 'ssh matt@178.62.114.84 rm -rf /home/matt/www/newton/dist'
-                sh 'mv /home/matt/www/newton/temp_deploy/dist /home/matt/www/newton/'
+
+                echo 'Moving package from temp to live...'
+                sh 'ssh matt@178.62.114.84 mv /home/matt/www/newton/temp_deploy/dist /home/matt/www/newton/'
             }
         }
     }
