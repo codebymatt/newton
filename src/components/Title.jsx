@@ -6,7 +6,7 @@ export default class Title extends React.Component {
             <div>
                 <h1>Newton</h1>
                 <div id='beta'>
-                    <p>Beta</p>
+                    <p>BETA</p>
                 </div>
             </div>
         );
