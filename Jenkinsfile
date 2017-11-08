@@ -29,12 +29,7 @@ pipeline {
                 sh 'scp -r ./dist matt@178.62.114.84:/home/matt/www/newton/temp_deploy/'
 
                 echo 'Moving package from temp to live...'
-                sh 'ssh matt@178.62.114.84 ls '
-                sh 'ssh matt@178.62.114.84 ls /home'
-                sh 'ssh matt@178.62.114.84 ls /home/newton'
-                sh 'ssh matt@178.62.114.84 cd /home/newton/www/newton && rm -rf dist'
-                sh 'ssh matt@178.62.114.84 ls /home/newton/www/newton/temp_deploy'
-                sh 'ssh matt@178.62.114.84 mv /home/newton/www/newton/temp_deploy/dist /home/newton/www/newton/'
+                sh 'ssh matt@178.62.114.84 rm -rf /home/www/newton/dist  && mv /home/www/newton/temp_deploy/dist /home/newton/www/newton/'
             }
         }
     }
