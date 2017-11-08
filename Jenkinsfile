@@ -1,12 +1,13 @@
 #!usr/bin/env groovy
 
 pipeline {
-    /*agent {
-        docker {
+    agent {
+        any
+        /*docker {
             image 'node'
             args  '-u jenkins'
-        }
-    }*/
+        }*/
+    }
     stages {
         stage('Build') {
             steps {
