@@ -1,27 +1,27 @@
 #!usr/bin/env groovy
 
 pipeline {
-    agent {
+    /*agent {
         docker {
             image 'node'
             args  '-u jenkins'
         }
-    }
+    }*/
     stages {
         stage('Build') {
             steps {
                 sh 'whoami'
                 echo 'Installing dependencies...'
-                sh 'npm install'
+                sh 'yarn install'
 
                 echo 'Building package...'
-                sh 'npm run-script build'
+                sh 'yarn run build'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Removing old temp package...'
-                sh 'ssh matt@178.62.114.84'
+                sh 'ssh matt@178.62.114.84 rm -rf /www/newton/temp_deploy/dist/'
 
                 echo 'Removing old temp directory...'
                 sh 'ssh matt@178.62.114.84 mkdir -p /www/newton/temp_deploy'
