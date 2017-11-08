@@ -43,7 +43,7 @@ class Scalar extends Component {
                     <input
                         type='text'
                         name='inputOne'
-                        placeholder='0'
+                        placeholder='0.0'
                         value={this.state.x}
                         onChange={
                             event => this.setState({
@@ -81,11 +81,11 @@ class Scalar extends Component {
                     <input
                         type='text'
                         name='inputTwo'
-                        placeholder='0'
+                        placeholder='0.0'
                         value={this.state.y}
                         onChange={
                             event => this.setState({
-                                x: this.state.backwardRate(event.target.value),
+                                x: this.getResult(this.state.right, this.state.left, event.target.value),
                                 y: event.target.value
                             })
                         }
