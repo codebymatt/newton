@@ -16,8 +16,8 @@ export default class Kicker extends React.Component {
                     <span>Astronomers use parsecs.</span>
                     <Typist.Backspace count={24} delay={1000} />
                     <Typist.Delay ms={500} />
-                    <span>Grandmas recipes are all in ounces.<Typist.Delay ms={750} /> Really, Grandma?</span>
-                    <Typist.Backspace count={52} delay={1000} />
+                    <span>Grandmas recipes are all in ounces.</span>
+                    <Typist.Backspace count={35} delay={1000} />
                     <Typist.Delay ms={750} />
                     <span>You like your math done in style.</span>
                 </Typist>

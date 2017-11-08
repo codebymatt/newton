@@ -6,7 +6,7 @@ export default class Inputs extends React.Component {
         return (
             <div id='inputs-wrapper'>
                 <div id='input-text'>
-                    Pick a quantity to convert, then pick the units you want
+                    Pick a quantity to convert, then pick which units you want
                 </div>
                 <Scalar />
             </div>
