@@ -19,14 +19,11 @@ class App extends React.Component {
 
     metricHandler(metric) {
         var left = this.getMetricOptions(metric)[0].options[0].name;
-        console.log(left);
         var right = left;
         this.setState({ selected: metric, left: left, right: right });
-        console.log("Works to here! Selected is: " + this.state.selected)
     }
 
     changeLeft(val) {
-        console.log("Works to here (2)")
         this.setState({ left: val });
     }
 

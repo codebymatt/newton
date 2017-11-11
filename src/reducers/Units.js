@@ -14,7 +14,7 @@ export default function() {
             {name: 'ton', verbose:'Ton'}
         ]},
         {name: 'vel', options: [
-            {name: 'kmphr', verbose:'Km / Hour'},
+            {name: 'kmph', verbose:'Km / Hour'},
             {name: 'mph', verbose:'Miles/Hour'},
             {name: 'mach', verbose:'Mach'}
         ]},
@@ -27,7 +27,7 @@ export default function() {
             {name: 'mm', verbose:'Millimeters'},
             {name: 'cm', verbose:'Centimeters'},
             {name: 'm', verbose:'Meters'},
-            {name: 'in', verbose:'Inches'},
+            {name: 'inch', verbose:'Inches'},
             {name: 'feet', verbose:'Feet'},
             {name: 'mile', verbose:'Miles'},
         ]},

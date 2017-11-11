@@ -27,13 +27,12 @@ class Scalar extends Component {
     }
 
     getResult(start, end, input) {
-        console.log("Start is '" + start + "' and end is '" + end + "'");
         var options = this.props.rates.filter((unit) => {
             return unit.name == start
-        })[0]; console.log(options);
+        })[0];
         var rate = options.options.filter((result) => {
             return result.name == end
-        })[0]; console.log(rate);
+        })[0];
         return rate.f(input)
     }
 
