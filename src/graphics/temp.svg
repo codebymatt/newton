@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="71px" height="61px" viewBox="0 0 71 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="75px" height="64px" viewBox="0 0 75 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
     <title>Thermometer</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="ThermometerColor" transform="translate(-15.000000, -20.000000)">
-            <g id="Thermometer" transform="translate(15.000000, 20.000000)">
-                <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="71" height="61"></rect>
-                <path d="M38.75,3.5 L32.25,3.5 L32.25,43.0417622 L32.000363,43.1861694 C29.8512423,44.4293686 28.5,46.7217024 28.5,49.25 C28.5,53.1159932 31.6340068,56.25 35.5,56.25 C39.3659932,56.25 42.5,53.1159932 42.5,49.25 C42.5,46.7217024 41.1487577,44.4293686 38.999637,43.1861694 L38.75,43.0417622 L38.75,3.5 Z" id="Shell" stroke="#7303C0"></path>
-                <path d="M31.75,42.7533665 C29.5082449,44.0501518 28,46.4739412 28,49.25 C28,53.3921356 31.3578644,56.75 35.5,56.75 C39.6421356,56.75 43,53.3921356 43,49.25 C43,46.4739412 41.4917551,44.0501518 39.25,42.7533665 L39.25,30.5 L31.75,30.5 L31.75,42.7533665 Z" id="LiquidFill" fill="#7303C0"></path>
-                <g id="GraduationMarks" transform="translate(32.000000, 6.000000)" fill="#7303C0">
-                    <rect id="Rectangle-11" x="0" y="20.75" width="3.5" height="1.25"></rect>
-                    <rect id="Rectangle-11" x="0" y="15.75" width="3.5" height="1.25"></rect>
-                    <rect id="Rectangle-11" x="0" y="10.75" width="3.5" height="1.25"></rect>
-                    <rect id="Rectangle-11" x="0" y="5.75" width="3.5" height="1.25"></rect>
-                    <rect id="Rectangle-11" x="0" y="0.75" width="3.5" height="1.25"></rect>
+        <g id="ThermometerColor" transform="translate(-13.000000, -20.000000)">
+            <g id="Thermometer" transform="translate(13.000000, 20.000000)">
+                <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="75" height="63.5774648"></rect>
+                <g id="Group" transform="translate(29.000000, 3.000000)">
+                    <path d="M10.9330986,0.626760563 L4.43309859,0.626760563 L4.43309859,42.1140963 L4.19250587,42.2601074 C2.03992228,43.5664695 0.683098592,45.9813279 0.683098592,48.6483879 C0.683098592,52.7230475 3.82260995,56.01676 7.68309859,56.01676 C11.5435872,56.01676 14.6830986,52.7230475 14.6830986,48.6483879 C14.6830986,45.9813279 13.3262749,43.5664695 11.1736913,42.2601074 L10.9330986,42.1140963 L10.9330986,0.626760563 Z" id="Shell" stroke="#7303C0"></path>
+                    <path d="M3.93309859,41.0420989 C1.69134345,42.3388842 0.183098592,44.7626736 0.183098592,47.5387324 C0.183098592,51.680868 3.54096297,56 7.68309859,56 C11.8252342,56 15.1830986,51.680868 15.1830986,47.5387324 C15.1830986,44.7626736 13.6748537,42.3388842 11.4330986,41.0420989 L11.4330986,28.7887324 L3.93309859,28.7887324 L3.93309859,41.0420989 Z" id="LiquidFill" fill="#7303C0"></path>
+                    <g id="GraduationMarks" transform="translate(4.352113, 3.253521)" fill="#7303C0">
+                        <rect id="Rectangle-11" x="0" y="21.6267606" width="3.64788732" height="1.3028169"></rect>
+                        <rect id="Rectangle-11" x="0" y="16.415493" width="3.64788732" height="1.3028169"></rect>
+                        <rect id="Rectangle-11" x="0" y="11.2042254" width="3.64788732" height="1.3028169"></rect>
+                        <rect id="Rectangle-11" x="0" y="5.99295775" width="3.64788732" height="1.3028169"></rect>
+                        <rect id="Rectangle-11" x="0" y="0.781690141" width="3.64788732" height="1.3028169"></rect>
+                    </g>
                 </g>
             </g>
         </g>
