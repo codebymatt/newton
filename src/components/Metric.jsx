@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { changeClass } from '../actions/Metrics.js';
 
 /*
 const Metric = ({image, name, cardClass, handler}) => (
@@ -11,7 +13,7 @@ const Metric = ({image, name, cardClass, handler}) => (
 export {Metric};
 */
 
-export default class Metric extends Component {
+class Metric extends Component {
     constructor(props) {
         super(props);
         //this.metricName = this.props.id
@@ -20,8 +22,13 @@ export default class Metric extends Component {
     render() {
         return (
             <div className={this.props.cardClass}
+                 id={this.props.id}
                  onClick={
-                     () => this.props.handler(this.props.id)
+                     () => {this.props.handler(this.props.id);
+                     this.props.changeClass(this.props.appSelected, this.props.id);
+                     //console.log(this.props.changeClass(this.props.selected.selected, this.props.id))
+                     console.log(this.props.appSelected + ", " + this.props.id)
+                     }
                  }>
                 <img src={this.props.image} />
                 <p>{this.props.name}</p>
@@ -29,3 +36,18 @@ export default class Metric extends Component {
         );
     }
 }
+
+function mapStateToProps(state) {
+    return {
+        metrics: state.metrics,
+        //selected: state.selected
+    };
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        changeClass: (older, newer) => dispatch(changeClass(older, newer))
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Metric);

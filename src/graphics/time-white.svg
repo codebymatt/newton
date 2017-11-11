@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="15px" height="54px" viewBox="0 0 15 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="65px" height="65px" viewBox="0 0 65 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
-    <title>Thermometer</title>
+    <title>Clock</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="ThermometerWhite" transform="translate(-43.000000, -23.000000)">
-            <g id="Thermometer" transform="translate(43.000000, 23.000000)">
-                <path d="M10.75,0.5 L4.25,0.5 L4.25,40.0417622 L4.00036298,40.1861694 C1.85124228,41.4293686 0.5,43.7217024 0.5,46.25 C0.5,50.1159932 3.63400675,53.25 7.5,53.25 C11.3659932,53.25 14.5,50.1159932 14.5,46.25 C14.5,43.7217024 13.1487577,41.4293686 10.999637,40.1861694 L10.75,40.0417622 L10.75,0.5 Z" id="Shell" stroke="#FFFFFF"></path>
-                <path d="M3.75,39.7533665 C1.50824486,41.0501518 0,43.4739412 0,46.25 C0,50.3921356 3.35786438,53.75 7.5,53.75 C11.6421356,53.75 15,50.3921356 15,46.25 C15,43.4739412 13.4917551,41.0501518 11.25,39.7533665 L11.25,27.5 L3.75,27.5 L3.75,39.7533665 Z" id="LiquidFill" fill="#FFFFFF"></path>
-                <g id="GraduationMarks" transform="translate(4.000000, 3.000000)" fill="#FFFFFF">
-                    <rect id="Rectangle-11" x="0" y="20.75" width="3.5" height="1.25"></rect>
-                    <rect id="Rectangle-11" x="0" y="15.75" width="3.5" height="1.25"></rect>
-                    <rect id="Rectangle-11" x="0" y="10.75" width="3.5" height="1.25"></rect>
-                    <rect id="Rectangle-11" x="0" y="5.75" width="3.5" height="1.25"></rect>
-                    <rect id="Rectangle-11" x="0" y="0.75" width="3.5" height="1.25"></rect>
+        <g id="TimeWhite" transform="translate(-18.000000, -18.000000)">
+            <g id="Clock" transform="translate(18.000000, 18.000000)">
+                <g id="ClockOutline" fill="#FFFFFF">
+                    <path d="M32.5,65 C14.5507456,65 0,50.4492544 0,32.5 C0,14.5507456 14.5507456,0 32.5,0 C50.4492544,0 65,14.5507456 65,32.5 C65,50.4492544 50.4492544,65 32.5,65 Z M32.5,61 C48.2401154,61 61,48.2401154 61,32.5 C61,16.7598846 48.2401154,4 32.5,4 C16.7598846,4 4,16.7598846 4,32.5 C4,48.2401154 16.7598846,61 32.5,61 Z" id="Combined-Shape"></path>
+                </g>
+                <g id="ClockHands" transform="translate(30.000000, 20.000000)" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round">
+                    <path d="M0.5,13.5 L7.46010492,0.212526971" id="Line"></path>
+                    <path d="M0.5,13.5 L15.6137817,26.5986108" id="Line"></path>
                 </g>
             </g>
         </g>
