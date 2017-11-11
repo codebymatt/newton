@@ -9,7 +9,7 @@ class Scalar extends Component {
         super(props);
         var f = (c) => {return 32 + 9*(c/5)}
         var b = (h) => {return (h-32)*(5/9)}
-        this.state = { x: '', y: '', forwardRate: f, backwardRate: b, left: 'cels', right: 'fahr', selectedMetric: "temp" };
+        this.state = { x: '', y: '', forwardRate: f, backwardRate: b, left: 'cels', right: 'fahr'};
     }
 
     getMetricOptions(selectedMetric){
@@ -62,7 +62,7 @@ class Scalar extends Component {
                             }
                             value={this.state.left}
                         >
-                            {this.renderMetricOptions(this.state.selectedMetric)}
+                            {this.renderMetricOptions(this.props.selectedMetric)}
                         </select>
                         <img className='selectors' src={selectors} />
                     </div>
@@ -99,7 +99,7 @@ class Scalar extends Component {
                             }
                             value={this.state.right}
                         >
-                            {this.renderMetricOptions(this.state.selectedMetric)}
+                            {this.renderMetricOptions(this.props.selectedMetric)}
                         </select>
                         <img className='selectors' src={selectors} />
                     </div>
@@ -111,8 +111,8 @@ class Scalar extends Component {
 
 function mapStateToProps(state) {
     return {
-        rates: state.rates,
-        units: state.units
+        units: state.units,
+        rates: state.rates
     };
 }
 

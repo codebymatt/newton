@@ -8,7 +8,7 @@ export default class Inputs extends React.Component {
                 <div id='input-text'>
                     Pick a quantity to convert, then pick which units you want
                 </div>
-                <Scalar />
+                <Scalar selectedMetric={this.props.selectedMetric}/>
             </div>
         );
     }
