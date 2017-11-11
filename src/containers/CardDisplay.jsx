@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import {Metric} from '../components/Metric.jsx'
+import Metric from '../components/Metric.jsx'
 
 class CardDisplay extends Component {
     renderMetrics() {
         return this.props.metrics.map((metric) => {
             return (
-                <Metric key={metric.name} image={metric.image} name={metric.verbose} cardClass={metric.cardClass} />
+                <Metric key={metric.name} image={metric.image} id={metric.name} name={metric.verbose} cardClass={metric.cardClass} handler={this.props.handler}/>
             );
         });
     }
@@ -15,6 +15,7 @@ class CardDisplay extends Component {
         return (
             <div id='CardDisplay'>
                 {this.renderMetrics()}
+                <p>{console.log(this.props.selected)}</p>
             </div>
         );
     }

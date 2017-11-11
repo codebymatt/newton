@@ -7,9 +7,17 @@ import Info from './Info.jsx';
 import Inputs from './Inputs.jsx';
 import CardDisplay from '../containers/CardDisplay.jsx';
 
-class App extends React.Component {
+export default class App extends React.Component {
     constructor(props) {
         super(props)
+
+        this.metricHandler = this.metricHandler.bind(this);
+        this.state = { selected: "temp" }
+    }
+
+    metricHandler(metric) {
+        this.setState({ selected: metric });
+        console.log("Works to here! Selected is: " + this.state.selected)
     }
 
     render() {
@@ -17,18 +25,19 @@ class App extends React.Component {
             <div>
                 <Title />
                 <Kicker />
-                <Inputs selectedMetric={this.props.selected.selected}/>
-                <CardDisplay />
+                <Inputs selectedMetric={this.state.selected}/>
+                <CardDisplay handler={this.metricHandler} selected={this.state.selected}/>
                 <Info />
             </div>
         );
     }
 }
 
-function mapStateToProps(state) {
+/*function mapStateToProps(state) {
     return {
         selected: state.selected
     };
 }
 
 export default connect(mapStateToProps)(App)
+*/
