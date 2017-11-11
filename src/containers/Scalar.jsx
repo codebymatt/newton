@@ -111,8 +111,8 @@ class Scalar extends Component {
 
 function mapStateToProps(state) {
     return {
-        units: state.units,
-        rates: state.rates
+        rates: state.rates,
+        units: state.units
     };
 }
 
