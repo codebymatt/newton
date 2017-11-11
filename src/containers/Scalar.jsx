@@ -9,7 +9,7 @@ class Scalar extends Component {
         super(props);
         var f = (c) => {return 32 + 9*(c/5)}
         var b = (h) => {return (h-32)*(5/9)}
-        this.state = { x: '', y: '', forwardRate: f, backwardRate: b, left: 'cels', right: 'fahr'};
+        this.state = { x: '', y: '', forwardRate: f, backwardRate: b};
     }
 
     getMetricOptions(selectedMetric){
@@ -27,12 +27,13 @@ class Scalar extends Component {
     }
 
     getResult(start, end, input) {
+        console.log("Start is '" + start + "' and end is '" + end + "'");
         var options = this.props.rates.filter((unit) => {
             return unit.name == start
-        })[0];
+        })[0]; console.log(options);
         var rate = options.options.filter((result) => {
             return result.name == end
-        })[0];
+        })[0]; console.log(rate);
         return rate.f(input)
     }
 
@@ -48,19 +49,21 @@ class Scalar extends Component {
                         onChange={
                             event => this.setState({
                                 x: event.target.value,
-                                y: this.getResult(this.state.left, this.state.right, event.target.value) })
+                                y: this.getResult(this.props.left, this.props.right, event.target.value) })
                             }
                     />
                     <div className='select-wrapper'>
                         <select
                             onChange={
-                                event => this.setState({
-                                    left: event.target.value,
+                                event => {this.setState({
+                                    //left: event.target.value,
                                     //y: this.getResult(this.state.left, this.state.right, this.state.x),
-                                    x: this.state.x,
-                                })
+                                    x: this.state.x
+                                });
+                                    this.props.changeLeft(event.target.value)
+                                }
                             }
-                            value={this.state.left}
+                            value={this.props.left}
                         >
                             {this.renderMetricOptions(this.props.selectedMetric)}
                         </select>
@@ -71,8 +74,8 @@ class Scalar extends Component {
                      className='arrows'
                      onClick={
                          event => {this.setState({
-                             left: this.state.right,
-                             right: this.state.left,
+                             left: this.props.right,
+                             right: this.props.left,
                              x: 0,
                              y: 0})
                  }
@@ -85,7 +88,7 @@ class Scalar extends Component {
                         value={this.state.y}
                         onChange={
                             event => this.setState({
-                                x: this.getResult(this.state.right, this.state.left, event.target.value),
+                                x: this.getResult(this.props.right, this.props.left, event.target.value),
                                 y: event.target.value
                             })
                         }
@@ -93,11 +96,11 @@ class Scalar extends Component {
                     <div className='select-wrapper'>
                         <select
                             onChange={
-                                event => this.setState({
-                                    right: event.target.value
-                                })
-                            }
-                            value={this.state.right}
+                                event =>
+                                    //right: event.target.value
+                                    this.props.changeRight(event.target.value)
+                                }
+                            value={this.props.right}
                         >
                             {this.renderMetricOptions(this.props.selectedMetric)}
                         </select>

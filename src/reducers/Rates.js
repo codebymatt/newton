@@ -10,6 +10,15 @@ export default function() {
         ]},
         {name: 'kelv', options: [
             {name: 'cels', f: (i) => {return (i*1 - 273.15).toFixed(2)}}, {name: 'fahr', f: (i) => {return (((i*9)/5) - 459.67).toFixed(2)}}, {name: 'kelv', f: (i) => {return (i*1).toFixed(2)}}
-        ]}
+        ]},
+        {name: 'sec', options: [
+            {name: 'sec', f: (i) => { return (i*1).toFixed(2)}}, {name: 'min', f: (i) => {return (i/60).toFixed(2)}}, {name: 'hour', f:(i) => {return (i/3600).toFixed(2)}}
+        ]},
+        {name: 'min', options: [
+            {name: 'sec', f: (i) => { return (i*60).toFixed(2)}}, {name: 'min', f: (i) => {return (i*1).toFixed(2)}}, {name: 'hour', f:(i) => {return (i/60).toFixed(2)}}
+        ]},
+        {name: 'hour', options: [
+            {name: 'sec', f: (i) => { return (i*3600).toFixed(2)}}, {name: 'min', f: (i) => {return (i*60).toFixed(2)}}, {name: 'hour', f:(i) => {return (i*1).toFixed(2)}}
+        ]},
     ]
 }

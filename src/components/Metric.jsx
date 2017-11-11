@@ -14,14 +14,14 @@ export {Metric};
 export default class Metric extends Component {
     constructor(props) {
         super(props);
-        this.metricName = this.props.id
+        //this.metricName = this.props.id
     }
 
     render() {
         return (
             <div className={this.props.cardClass}
                  onClick={
-                     () => this.props.handler(this.metricName)
+                     () => this.props.handler(this.props.id)
                  }>
                 <img src={this.props.image} />
                 <p>{this.props.name}</p>

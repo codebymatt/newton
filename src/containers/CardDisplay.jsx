@@ -15,7 +15,6 @@ class CardDisplay extends Component {
         return (
             <div id='CardDisplay'>
                 {this.renderMetrics()}
-                <p>{console.log(this.props.selected)}</p>
             </div>
         );
     }
