@@ -72,13 +72,14 @@ class Scalar extends Component {
                 <img src={arrows}
                      className='arrows'
                      onClick={
-                         event => {this.setState({
-                             left: this.props.right,
-                             right: this.props.left,
-                             x: 0,
-                             y: 0})
+                         () => {
+                             this.props.changeLeft(this.props.right);
+                             this.props.changeRight(this.props.left)
+                             //x: 0,
+                             //y: 0
+                         }
                  }
-                }/>
+                />
                 <div className='input-wrapper'>
                     <input
                         type='text'
