@@ -58,7 +58,10 @@ class Scalar extends Component {
                                 //event => {this.setState({
                                 //    x: this.state.x
                                 //});
-                                (event) => {this.props.changeLeft(event.target.value)}
+                                (event) => {
+                                    this.props.changeLeft(event.target.value);
+                                    this.props.changeX(this.getResult(event.target.value, this.props.right, this.props.y))
+                                }
                                 //}
                             }
                             value={this.props.left}
@@ -99,7 +102,10 @@ class Scalar extends Component {
                     <div className='select-wrapper'>
                         <select
                             onChange={
-                                event => {this.props.changeRight(event.target.value)}
+                                event => {
+                                    this.props.changeRight(event.target.value);
+                                    this.props.changeY(this.getResult(event.target.value, this.props.left, this.props.x))
+                                }
                             }
                             value={this.props.right}
                         >
