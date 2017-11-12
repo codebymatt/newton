@@ -76,7 +76,8 @@ class Scalar extends Component {
                      onClick={
                          () => {
                              this.props.changeLeft(this.props.right);
-                             this.props.changeRight(this.props.left)
+                             this.props.changeRight(this.props.left);
+                             this.props.changeY(this.getResult(this.props.right, this.props.left, this.props.x));
                          }
                  }
                 />
