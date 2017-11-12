@@ -8,7 +8,9 @@ class CardDisplay extends Component {
         //console.log(this.props.metrics)
         return this.props.metrics.map((metric) => {
             return (
-                <Metric {key={metric.name} image={metric.image} id={metric.name} name={metric.verbose} cardClass={metric.cardClass} handler={this.props.handler} appSelected={this.props.selected}}/>
+                <Metric key={metric.name} image={metric.image} id={metric.name} name={metric.verbose}
+                        cardClass={metric.cardClass} handler={this.props.handler} appSelected={this.props.selected}
+                        x={this.props.x} y={this.props.y} changeX={this.props.changeX} changeY={this.props.changeY}/>
             );
         });
     }

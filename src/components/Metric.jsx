@@ -26,8 +26,8 @@ class Metric extends Component {
                  onClick={
                      () => {this.props.handler(this.props.id);
                      this.props.changeClass(this.props.appSelected, this.props.id);
-                     //console.log(this.props.changeClass(this.props.selected.selected, this.props.id))
-                     console.log(this.props.appSelected + ", " + this.props.id)
+                     this.props.changeX(0);
+                     this.props.changeY(0);
                      }
                  }>
                 <img src={this.props.image} />

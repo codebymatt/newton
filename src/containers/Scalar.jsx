@@ -60,7 +60,7 @@ class Scalar extends Component {
                                 //});
                                 (event) => {
                                     this.props.changeLeft(event.target.value);
-                                    this.props.changeX(this.getResult(event.target.value, this.props.right, this.props.y))
+                                    this.props.changeX(this.getResult(this.props.right, event.target.value, this.props.y))
                                 }
                                 //}
                             }
@@ -104,7 +104,7 @@ class Scalar extends Component {
                             onChange={
                                 event => {
                                     this.props.changeRight(event.target.value);
-                                    this.props.changeY(this.getResult(event.target.value, this.props.left, this.props.x))
+                                    this.props.changeY(this.getResult(this.props.left, event.target.value, this.props.x))
                                 }
                             }
                             value={this.props.right}

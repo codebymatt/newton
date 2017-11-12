@@ -54,7 +54,7 @@ class App extends React.Component {
                 <Title />
                 <Kicker />
                 <Inputs selectedMetric={this.state.selected} left={this.state.left} right={this.state.right} changeLeft={this.changeLeft} changeRight={this.changeRight} x={this.state.x} y={this.state.y} changeX={this.changeX} changeY={this.changeY} />
-                <CardDisplay handler={this.metricHandler} selected={this.state.selected}/>
+                <CardDisplay handler={this.metricHandler} selected={this.state.selected} x={this.state.x} y={this.state.y} changeX={this.changeX} changeY={this.changeY} />
                 <Info />
             </div>
         );

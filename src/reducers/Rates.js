@@ -26,6 +26,9 @@ export default function() {
         {name: 'mph', options: [
             {name: 'kmph', f: (i) => { return (i/0.621371).toFixed(2)}}, {name: 'mph', f: (i) => {return (i*1).toFixed(2)}}, {name: 'mach', f:(i) => {return (i/767.269).toFixed(2)}}
         ]},
+        {name: 'mach', options: [
+            {name: 'kmph', f: (i) => { return (i*1234.8).toFixed(2)}}, {name: 'mph', f: (i) => {return (i*767.269).toFixed(2)}}, {name: 'mach', f:(i) => {return (i*1).toFixed(2)}}
+        ]},
         {name: 'gram', options: [
             {name: 'gram', f: (i) => { return (i*1).toFixed(2)}}, {name: 'kilo', f: (i) => {return (i/1000).toFixed(2)}}, {name: 'oz', f:(i) => {return (i/28.3495).toFixed(2)}}, {name: 'lb', f:(i) => {return (i/453.592).toFixed(2)}}, {name: 'st', f:(i) => {return (i/6350.29).toFixed(2)}}, {name: 'ton', f:(i) => {return (i/907185).toFixed(2)}}
         ]},
