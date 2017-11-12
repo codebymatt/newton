@@ -9,7 +9,7 @@ class Scalar extends Component {
         super(props);
         var f = (c) => {return 32 + 9*(c/5)}
         var b = (h) => {return (h-32)*(5/9)}
-        this.state = { x: '', y: '', forwardRate: f, backwardRate: b, left: 'cels', right: 'fahr', selectedMetric: "temp" };
+        //this.state = { forwardRate: f, backwardRate: b};
     }
 
     getMetricOptions(selectedMetric){
@@ -44,25 +44,29 @@ class Scalar extends Component {
                         type='text'
                         name='inputOne'
                         placeholder='0.0'
-                        value={this.state.x}
+                        value={this.props.x}
                         onChange={
-                            event => this.setState({
-                                x: event.target.value,
-                                y: this.getResult(this.state.left, this.state.right, event.target.value) })
+                            event => {
+                                this.props.changeX(event.target.value);
+                                this.props.changeY(this.getResult(this.props.left, this.props.right, event.target.value))
                             }
+                        }
                     />
                     <div className='select-wrapper'>
                         <select
                             onChange={
-                                event => this.setState({
-                                    left: event.target.value,
-                                    //y: this.getResult(this.state.left, this.state.right, this.state.x),
-                                    x: this.state.x,
-                                })
+                                //event => {this.setState({
+                                //    x: this.state.x
+                                //});
+                                (event) => {
+                                    this.props.changeLeft(event.target.value);
+                                    this.props.changeX(this.getResult(this.props.right, event.target.value, this.props.y))
+                                }
+                                //}
                             }
-                            value={this.state.left}
+                            value={this.props.left}
                         >
-                            {this.renderMetricOptions(this.state.selectedMetric)}
+                            {this.renderMetricOptions(this.props.selectedMetric)}
                         </select>
                         <img className='selectors' src={selectors} />
                     </div>
@@ -70,36 +74,43 @@ class Scalar extends Component {
                 <img src={arrows}
                      className='arrows'
                      onClick={
-                         event => {this.setState({
-                             left: this.state.right,
-                             right: this.state.left,
-                             x: 0,
-                             y: 0})
+                         () => {
+                             this.props.changeLeft(this.props.right);
+                             this.props.changeRight(this.props.left);
+                             this.props.changeY(this.getResult(this.props.right, this.props.left, this.props.x));
+                         }
                  }
-                }/>
+                />
                 <div className='input-wrapper'>
                     <input
                         type='text'
                         name='inputTwo'
                         placeholder='0.0'
-                        value={this.state.y}
+                        value={this.props.y}
                         onChange={
+                            event => {
+                                this.props.changeY(event.target.value);
+                                this.props.changeX(this.getResult(this.props.right, this.props.left, event.target.value))
+                            }
+                        }
+                        /*onChange={
                             event => this.setState({
-                                x: this.getResult(this.state.right, this.state.left, event.target.value),
+                                x: this.getResult(this.props.right, this.props.left, event.target.value),
                                 y: event.target.value
                             })
-                        }
+                        }*/
                     />
                     <div className='select-wrapper'>
                         <select
                             onChange={
-                                event => this.setState({
-                                    right: event.target.value
-                                })
+                                event => {
+                                    this.props.changeRight(event.target.value);
+                                    this.props.changeY(this.getResult(this.props.left, event.target.value, this.props.x))
+                                }
                             }
-                            value={this.state.right}
+                            value={this.props.right}
                         >
-                            {this.renderMetricOptions(this.state.selectedMetric)}
+                            {this.renderMetricOptions(this.props.selectedMetric)}
                         </select>
                         <img className='selectors' src={selectors} />
                     </div>

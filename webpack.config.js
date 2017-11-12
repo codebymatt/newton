@@ -21,7 +21,14 @@ module.exports = {
             //{ test: /\.(jpg|png|svg)$/, use: 'file-loader', options: {
             //    name: './src/graphics/[hash].[ext]',
             //},},
-            { test: /\.svg$/, use: 'file-loader'},
+            { test: /\.svg$/, use: [
+                {
+                    loader: 'file-loader',
+                    options: {
+                        name: 'img/[name].[ext]'
+                    }
+                }]
+            },
             { test: /\.sass$/, use: ExtractTextPlugin.extract({
                 fallback: 'style-loader',
                 use: ['css-loader', 'sass-loader']
