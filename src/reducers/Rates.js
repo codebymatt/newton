@@ -48,22 +48,22 @@ export default function() {
             {name: 'gram', f: (i) => { return (i*907185).toFixed(2)}}, {name: 'kilo', f: (i) => {return (i*907.185).toFixed(2)}}, {name: 'oz', f:(i) => {return (i*32000).toFixed(2)}}, {name: 'lb', f:(i) => {return (i*2000).toFixed(2)}}, {name: 'st', f:(i) => {return (i*142.857).toFixed(2)}}, {name: 'ton', f:(i) => {return (i*1).toFixed(2)}}
         ]},
         {name: 'mm', options: [
-            {name: 'mm', f: (i) => { return (i*1).toFixed(2)}}, {name: 'cm', f: (i) => {return (i/10).toFixed(2)}}, {name: 'm', f:(i) => {return (i/1000).toFixed(2)}}, {name: 'inch', f:(i) => {return (i/453.592).toFixed(2)}}, {name: 'feet', f:(i) => {return (i/6350.29).toFixed(2)}}, {name: 'mile', f:(i) => {return (i/907185).toFixed(2)}}
+            {name: 'mm', f: (i) => { return (i*1).toFixed(2)}}, {name: 'cm', f: (i) => {return (i/10).toFixed(2)}}, {name: 'm', f:(i) => {return (i/1000).toFixed(2)}}, {name: 'inch', f:(i) => {return (i*0.0393).toFixed(2)}}, {name: 'feet', f:(i) => {return (i*0.00328084).toFixed(2)}}, {name: 'mile', f:(i) => {return (i*0.000000621371).toFixed(2)}}
         ]},
         {name: 'cm', options: [
-            {name: 'mm', f: (i) => { return (i*1000).toFixed(2)}}, {name: 'cm', f: (i) => {return (i*1).toFixed(2)}}, {name: 'm', f:(i) => {return (i*35.274).toFixed(2)}}, {name: 'inch', f:(i) => {return (i*2.204).toFixed(2)}}, {name: 'feet', f:(i) => {return (i*0.157473).toFixed(2)}}, {name: 'mile', f:(i) => {return (i*0.00110231).toFixed(2)}}
+            {name: 'mm', f: (i) => { return (i*10).toFixed(2)}}, {name: 'cm', f: (i) => {return (i*1).toFixed(2)}}, {name: 'm', f:(i) => {return (i/10).toFixed(2)}}, {name: 'inch', f:(i) => {return (i*0.393701).toFixed(2)}}, {name: 'feet', f:(i) => {return (i*0.0328084).toFixed(2)}}, {name: 'mile', f:(i) => {return (i*0.00000621371).toFixed(2)}}
         ]},
         {name: 'm', options: [
-            {name: 'mm', f: (i) => { return (i*28.3495).toFixed(2)}}, {name: 'cm', f: (i) => {return (i/35.274).toFixed(2)}}, {name: 'm', f:(i) => {return (i*1).toFixed(2)}}, {name: 'inch', f:(i) => {return (i*0.0625).toFixed(2)}}, {name: 'feet', f:(i) => {return (i*0.00446429).toFixed(2)}}, {name: 'mile', f:(i) => {return (i*0.00003125).toFixed(2)}}
+            {name: 'mm', f: (i) => { return (i*1000).toFixed(2)}}, {name: 'cm', f: (i) => {return (i*100).toFixed(2)}}, {name: 'm', f:(i) => {return (i*1).toFixed(2)}}, {name: 'inch', f:(i) => {return (i*39.3701).toFixed(2)}}, {name: 'feet', f:(i) => {return (i*3.28).toFixed(2)}}, {name: 'mile', f:(i) => {return (i*0.000621371).toFixed(2)}}
         ]},
         {name: 'inch', options: [
-            {name: 'mm', f: (i) => { return (i*453.592).toFixed(2)}}, {name: 'cm', f: (i) => {return (i/2.204).toFixed(2)}}, {name: 'm', f:(i) => {return (i/.0625).toFixed(2)}}, {name: 'inch', f:(i) => {return (i*1).toFixed(2)}}, {name: 'feet', f:(i) => {return (i*0.0714286).toFixed(2)}}, {name: 'mile', f:(i) => {return (i*0.0005).toFixed(2)}}
+            {name: 'mm', f: (i) => { return (i*25.4).toFixed(2)}}, {name: 'cm', f: (i) => {return (i*2.54).toFixed(2)}}, {name: 'm', f:(i) => {return (i*0.0254).toFixed(2)}}, {name: 'inch', f:(i) => {return (i*1).toFixed(2)}}, {name: 'feet', f:(i) => {return (i*12).toFixed(2)}}, {name: 'mile', f:(i) => {return (i*0.0000157828).toFixed(2)}}
         ]},
         {name: 'feet', options: [
-            {name: 'mm', f: (i) => { return (i*6350.29).toFixed(2)}}, {name: 'cm', f: (i) => {return (i*6.35029).toFixed(2)}}, {name: 'm', f:(i) => {return (i*224).toFixed(2)}}, {name: 'inch', f:(i) => {return (i*14).toFixed(2)}}, {name: 'feet', f:(i) => {return (i*1).toFixed(2)}}, {name: 'mile', f:(i) => {return (i*0.007).toFixed(2)}}
+            {name: 'mm', f: (i) => { return (i*304.8).toFixed(2)}}, {name: 'cm', f: (i) => {return (i*30.48).toFixed(2)}}, {name: 'm', f:(i) => {return (i*0.3048).toFixed(2)}}, {name: 'inch', f:(i) => {return (i*12).toFixed(2)}}, {name: 'feet', f:(i) => {return (i*1).toFixed(2)}}, {name: 'mile', f:(i) => {return (i*0.000189394).toFixed(2)}}
         ]},
         {name: 'mile', options: [
-            {name: 'mm', f: (i) => { return (i*907185).toFixed(2)}}, {name: 'cm', f: (i) => {return (i*907.185).toFixed(2)}}, {name: 'm', f:(i) => {return (i*32000).toFixed(2)}}, {name: 'inch', f:(i) => {return (i*2000).toFixed(2)}}, {name: 'feet', f:(i) => {return (i*142.857).toFixed(2)}}, {name: 'mile', f:(i) => {return (i*1).toFixed(2)}}
+            {name: 'mm', f: (i) => { return (i*1609340).toFixed(2)}}, {name: 'cm', f: (i) => {return (i*160934).toFixed(2)}}, {name: 'm', f:(i) => {return (i*1609.34).toFixed(2)}}, {name: 'inch', f:(i) => {return (i*63360).toFixed(2)}}, {name: 'feet', f:(i) => {return (i*5280).toFixed(2)}}, {name: 'mile', f:(i) => {return (i*1).toFixed(2)}}
         ]},
     ]
 }
