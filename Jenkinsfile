@@ -1,11 +1,10 @@
 #!usr/bin/env groovy
 
+// <SERVER_LOCATION_VARIABLE> and <USER> should
+// be set as an environment variables IRL
+
 pipeline {
     agent any
-        /*docker {
-            image 'node'
-            args  '-u jenkins'
-        }*/
     stages {
         stage('Build') {
             steps {
@@ -20,19 +19,19 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Removing old temp package...'
-                sh 'ssh matt@178.62.114.84 rm -rf /home/matt/www/newton/temp_deploy/dist'
+                sh 'ssh <USER>@<SERVER_LOCATION_VARIABLE> rm -rf /home/<USER>/www/newton/temp_deploy/dist'
 
                 echo 'Create temp folder if not there...'
-                sh 'ssh matt@178.62.114.84 mkdir -p /home/matt/www/newton/temp_deploy'
-                
+                sh 'ssh <USER>@<SERVER_LOCATION_VARIABLE> mkdir -p /home/<USER>/www/newton/temp_deploy'
+
                 echo 'Copying package to temp dist...'
-                sh 'scp -r ./dist matt@178.62.114.84:/home/matt/www/newton/temp_deploy/'
+                sh 'scp -r ./dist <USER>@<SERVER_LOCATION_VARIABLE>:/home/<USER>/www/newton/temp_deploy/'
 
                 echo 'Cleaning package destination...'
-                sh 'ssh matt@178.62.114.84 rm -rf /home/matt/www/newton/dist'
+                sh 'ssh <USER>@<SERVER_LOCATION_VARIABLE> rm -rf /home/<USER>/www/newton/dist'
 
                 echo 'Moving package from temp to live...'
-                sh 'ssh matt@178.62.114.84 mv /home/matt/www/newton/temp_deploy/dist /home/matt/www/newton/'
+                sh 'ssh <USER>@<SERVER_LOCATION_VARIABLE> mv /home/<USER>/www/newton/temp_deploy/dist /home/<USER>/www/newton/'
             }
         }
     }
